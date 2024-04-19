@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Recovery Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="hidden" id="folder-path">
+    <h1>File Recovery Service</h1>
+    <div id="drop-area" class="drop-area">
+        <p>Drag & Drop files here or click to select files</p>
+        <input type="file" id="file-input" accept="image/*" multiple>
+        <input type="file" id="folder-input" webkitdirectory directory multiple style="display: none;">
+        <button id="select-folder">폴더 선택</button>
+        <div id="selected-folder" style="margin-top: 10px;"></div> <!-- 폴더 이름을 표시할 요소 추가 -->
+    </div>
+    <div id="image-preview"></div>
+    <select id="recoveryTool" name="recoveryTool">
+        <option value="photorec">PhotoRec</option>
+        <option value="testdisk">TestDisk</option>
+    </select>
+    <button id="submit-button" type="submit">Recover File</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
